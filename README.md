@@ -91,3 +91,9 @@ The landscape responsive breakpoint will be applied when the screen width is gre
 ```
 
 And then this will be the only point at which Flexisel changes.
+
+## License
+
+MIT licensed
+
+Copyright (C) 2015 Greg Denehy
