@@ -96,4 +96,4 @@ And then this will be the only point at which Flexisel changes.
 
 MIT licensed
 
-Copyright (C) 2015 Greg Denehy
+Copyright (C) 2016 melihsahinkesen
