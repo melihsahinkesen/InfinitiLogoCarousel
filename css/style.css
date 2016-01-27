@@ -1,39 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
 #looplogoslide, #looplogoslide2 {
-display:none;
+  display:none;
+  overflow: hidden;
 }
 
 .nbs-flexisel-container {
-    position:relative;
-    max-width:100%;
+  position:relative;
+  max-width:100%;
+  display: block;
+  overflow: hidden;
 }
 .nbs-flexisel-ul {
-    position:relative;
-    width:99999px;
-    margin:0px;
-    padding:0px;
-    list-style-type:none;   
-    text-align:center;  
+  position:relative;
+  width:99999px;
+  margin:0px;
+  padding:0px;
+  list-style-type:none;   
+  text-align:center;  
 }
 
 .nbs-flexisel-inner {
-    overflow:hidden;
-    float:left;
-    width:100%;
-    background:#3E3D3B;
+  overflow:hidden;
+  float:left;
+  width:100%;
+  background:#3E3D3B;
 }
 
 .nbs-flexisel-item {
-    float:left;
-    margin:0px;
-    padding:0px;
-    position:relative;
-    line-height:0px;
+  float:left;
+  margin:0px;
+  padding:0px;
+  position:relative;
+  line-height:0px;
 }
 .nbs-flexisel-item img {
-    width: 100%;
-    position: relative;
-    margin: 25px 0 25px 0;
-    max-width:100px;
+  width: 100%;
+  position: relative;
+  margin: 25px 0 25px 0;
+  max-width:100px;
 }
 

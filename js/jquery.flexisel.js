@@ -1,19 +1,15 @@
 /*
- * File: jquery.flexisel.js
- * Version: 1.0.2
- * Description: Responsive carousel jQuery plugin
- * Author: 9bit Studios
- * Copyright 2012, 9bit Studios
- * http://www.9bitstudios.com
- * Free to use and abuse under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
+ * flexisel (Modified by melihsahinkesen)
+ * Copyright (c) 2012 9bit Studios
+ * Copyright (c) 2016 melihsahinkesen
+ * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
  */
 (function ($) {
     $.fn.flexisel = function(options) {
 	
         var defaults = $.extend({
             visibleItems : 4,
-            animationSpeed : 200,
+            animationSpeed : 1000,
             autoPlay : true,
             autoPlaySpeed : 3000,
             pauseOnHover : true,
@@ -39,8 +35,7 @@
         
         /******************************
         Private Variables
-         *******************************/
-         
+        *******************************/
         var object = $(this);
         var settings = $.extend(defaults, options);
         var itemsWidth; // Declare the global width of each item in carousel
@@ -64,7 +59,7 @@
             /******************************
             Initialize Items
             Fully initialize everything. Plugin is loaded and ready after finishing execution
-	    *******************************/
+            *******************************/
             initializeItems : function() {
 
                 var listParent = object.parent();
@@ -88,10 +83,10 @@
 
             },
             
-	    /******************************
+            /******************************
             Append HTML
             Add additional markup needed by plugin to the DOM
-	    *******************************/
+            *******************************/
             appendHTML : function() {
                 object.addClass("nbs-flexisel-ul");
                 object.wrap("<div class='nbs-flexisel-container'><div class='nbs-flexisel-inner'></div></div>");
@@ -110,17 +105,16 @@
                     object.append(cloneContent);
                 }
             },
+
             /******************************
             Set Event Handlers
-	    Set events: click, resize, etc
+            Set events: click, resize, etc
             *******************************/
             setEventHandlers : function() {
 
                 var listParent = object.parent();
                 var flexiselInner = listParent.parent();
                 var childSet = object.children();
-                var leftArrow = flexiselInner.find(".nbs-flexisel-nav-left");
-                var rightArrow = flexiselInner.find(".nbs-flexisel-nav-right");
 
                 $(window).on("resize", function(event) {
 
@@ -141,26 +135,6 @@
                             'left' : 0
                         });
                     }
-
-                    // Hide the arrows if the elements are the same of the visible
-                    if (!settings.clone && totalItems <= itemsVisible) {
-                      leftArrow.add(rightArrow).css('visibility', 'hidden');
-                    }
-                    else {
-                      leftArrow.add(rightArrow).css('visibility', 'visible');
-
-                      var halfArrowHeight = (leftArrow.height()) / 2;
-                      var arrowMargin = (innerHeight / 2) - halfArrowHeight;
-                      leftArrow.css("top", arrowMargin + "px");
-                      rightArrow.css("top", arrowMargin + "px");
-                    }
-
-                });
-                $(leftArrow).on("click", function(event) {
-                    methods.scrollLeft();
-                });
-                $(rightArrow).on("click", function(event) {
-                    methods.scrollRight();
                 });
                 if (settings.pauseOnHover === true) {
                     $(".nbs-flexisel-item").on({
@@ -184,11 +158,11 @@
                 object[0].addEventListener('touchmove', methods.touchHandler.handleTouchMove, false);
 
             },
+
             /******************************
             Set Responsive Events
             Set breakpoints depending on responsiveBreakpoints
             *******************************/            
-            
             setResponsiveEvents: function() {
                 var contentWidth = $('html').width();
                 
@@ -218,8 +192,7 @@
             /******************************
             Sort Responsive Object
             Gets all the settings in resposiveBreakpoints and sorts them into an array
-            *******************************/            
-            
+            *******************************/
             sortResponsiveObject: function(obj) {
                 
                 var responsiveObjects = [];
@@ -249,7 +222,7 @@
                         itemsWidth = (innerWidth) / itemsVisible;
 
                         var childSet = object.children();
-			var increment = (settings.flipPage)? innerWidth: itemsWidth;
+                        var increment = (settings.flipPage)? innerWidth: itemsWidth;
 			
                         object.animate({
                             'left' : "+=" + increment
@@ -268,9 +241,10 @@
                     }
                 }
             },
+
             /******************************
             Scroll Right
-            *******************************/            
+            *******************************/
             scrollRight : function() {
                 var listParent = object.parent();
                 var innerWidth = listParent.width();
@@ -319,9 +293,10 @@
                     }
                 };                
             },
+
             /******************************
             Adjust Scroll 
-             *******************************/
+            *******************************/
             adjustScroll : function() {
                 var listParent = object.parent();
                 var childSet = object.children();
