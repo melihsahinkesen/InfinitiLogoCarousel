@@ -2,7 +2,7 @@
 A responsive jQuery İnfiniti Loop Logo Carousel Slider.
 
 ### Example
-<img src="https://melihsahinkesen.com/dropbox/Infi-example.gif">
+<img src="https://melihsahinkesen.com/dropbox/example-infi.gif">
 
 All you have to do is call flexisel on your unordered list containing images. Call it on the $(window).load event (as opposed to the $(document).ready event) so that Flexisel can calculate the width of the images and figure out how to space them out properly. For example...
 
