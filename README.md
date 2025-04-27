@@ -1,8 +1,10 @@
-# InfinitiLogoCarousel
-A responsive jQuery İnfiniti Loop Logo Carousel Slider.
+# Infiniti Logo Carousel Slider
+A responsive jQuery Infiniti Loop Logo Carousel Slider.
 
-### Example
-<img src="https://melihsahinkesen.com/dropbox/example-infi.gif">
+**Design & Development**: Jan 2016
+
+## Screenshot
+![Screenshot of Infiniti Logo Carousel user interface created by Melih Şahinkesen.](https://www.melihsahinkesen.com/dropbox/infi-logo-slide-example.gif)
 
 All you have to do is call flexisel on your unordered list containing images. Call it on the $(window).load event (as opposed to the $(document).ready event) so that Flexisel can calculate the width of the images and figure out how to space them out properly. For example...
 
@@ -93,7 +95,5 @@ The landscape responsive breakpoint will be applied when the screen width is gre
 And then this will be the only point at which Flexisel changes.
 
 ## License
-
 MIT licensed
-
-Copyright (C) 2016 melihsahinkesen
+Copyright (C) 2016 Melih Şahinkesen
