@@ -1,5 +1,5 @@
-# Infiniti Logo Carousel Slider
-A responsive jQuery Infiniti Loop Logo Carousel Slider.
+# Infinity Logo Carousel Slider
+A responsive jQuery Infinity loop logo carousel slider.
 
 **Design & Development**: Jan 2016
 
