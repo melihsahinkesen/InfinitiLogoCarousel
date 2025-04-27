@@ -1,13 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name = "viewport" content = "user-scalable=no, width=device-width">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<title>InfiLogoSlide - A responsive jQuery İnfiniti Loop Logo Carousel Slider</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+  <!-- Basics
+	================================================== -->
+  <meta charset="utf-8">
+  <title>InfiLogoSlide - Melih Şahinkesen</title>
+  <meta name="description" content="A responsive jQuery infiniti loop logo carousel slider">
+  <meta name='developer' content="melih şahinkesen - melihsahinkesen.com">
+
+  <!-- Mobile Specific Metas
+	================================================== -->
+  <meta name = "viewport" content = "user-scalable=no, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- CSS
+	================================================== -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -25,7 +33,6 @@
     <li><img src="images/logo-slide-tera.png" /></li>
   </ul>
 
-
   <ul id="looplogoslide2">
     <li><img src="images/logo-slide-aion.png" /></li>
     <li><img src="images/logo-slide-bladeandsoul.png" /></li>
@@ -39,35 +46,8 @@
     <li><img src="images/logo-slide-tera.png" /></li>
   </ul>
 
-  <script type="text/javascript">
-  $(window).load(function() {
-
-    $("#looplogoslide").flexisel();
-    $("#looplogoslide2").flexisel({
-      visibleItems: 5,
-      animationSpeed: 5000,
-      autoPlay: true,
-      autoPlaySpeed: 6000,
-      pauseOnHover: true,
-      enableResponsiveBreakpoints: true,
-      responsiveBreakpoints: { 
-        portrait: { 
-          changePoint:480,
-          visibleItems: 1
-        }, 
-        landscape: { 
-          changePoint:640,
-          visibleItems: 2
-        },
-        tablet: { 
-          changePoint:768,
-          visibleItems: 3
-        }
-      }
-    });
-
-  });
-  </script>
-
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

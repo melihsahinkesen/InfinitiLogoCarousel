@@ -1,9 +1,10 @@
 /*
- * flexisel (Modified by melihsahinkesen)
+ * flexisel
  * Copyright (c) 2012 9bit Studios
- * Copyright (c) 2016 melihsahinkesen
  * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
+ * Modified by Melih Şahinkesen (melihsahinkesen.com)
  */
+
 (function ($) {
     $.fn.flexisel = function(options) {
 	
